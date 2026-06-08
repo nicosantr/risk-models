@@ -21,8 +21,7 @@ FYI — the original file was 27MB because it had the full national FEMA and EIA
 
 ## Equity Risk
 
-**Palantir VaR** — `equity-risk/PLTR_VaR_MonteCarlo.xlsx`
-**Oracle VaR** — `equity-risk/ORCL_VaR_MonteCarlo.xlsx`
+**Palantir VaR** — `equity-risk/PLTR-ORCL-VaR.xlsx`
 
 Monte Carlo Value-at-Risk models using 10,000 simulations on log-normal returns. Outputs include 95% VaR, CVaR (expected shortfall), and loss distribution histograms. Built these first to learn the simulation methodology, then applied the same framework to physical climate risk in the EAL model.
 

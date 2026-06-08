@@ -1,30 +1,44 @@
-# Risk Models
+# Financial Risk Models
 
-A few financial risk models I built in Excel while teaching myself VaR, Monte Carlo simulation, and climate risk modeling.
+Risk models I built in Excel covering climate-financial risk, Monte Carlo simulation, and Value-at-Risk.
 
-## What's here
+## Climate Risk
 
-**Gulf Coast Flood EAL Model** (`EAL_model_Louisiana.xlsx`)
+**Gulf Coast Flood EAL Model** — `climate-risk/EAL_model_Louisiana.xlsx`
 
-This is the main one. It estimates the Expected Annual Loss from flooding for natural gas power plants on the Louisiana Gulf Coast. I used real data from FEMA's National Risk Index and the EIA-860 power plant database, and applied USACE depth-damage curves to estimate financial impact at the asset level.
+Expected Annual Loss model for Louisiana natural gas power plants exposed to flood hazard. Built with real data from FEMA's National Risk Index (filtered to 64 Louisiana parishes), EIA-860 power plant database (55 LA gas plants with MW capacity), and USACE depth-damage curves for industrial structures.
 
-The model runs 10,000 Monte Carlo simulations calibrated to climate-adjusted EAL, and includes a resilience ROI tab that compares mitigation cost against avoided losses. There's also an RCP 4.5 vs RCP 8.5 scenario toggle so you can see how EAL shifts under different climate pathways.
+What it does:
+- Calculates asset-level EAL from flood hazard using return period probabilities and depth-damage functions
+- Runs 10,000 Monte Carlo simulations calibrated to climate-adjusted EAL
+- Compares results under RCP 4.5 and RCP 8.5 climate scenarios
+- Includes a Resilience ROI tab comparing mitigation cost against avoided losses
+- Validates output against FEMA NRI parish-level flood EAL benchmarks
 
-I built this because I live in New Orleans and wanted to understand the financial side of flood risk — not just that it exists, but what it actually costs.
+I built this in New Orleans, where the financial cost of mispriced flood risk is not theoretical.
 
-**Equity VaR Models** (`PLTR_VaR_MonteCarlo.xlsx`, `ORCL_VaR_MonteCarlo.xlsx`)
+FYI — the original file was 27MB because it had the full national FEMA and EIA datasets loaded in. I used Claude to strip it down to just the Louisiana data and the model tabs, which brought it to 0.1MB. The model itself and all the formulas are my work.
 
-Monte Carlo Value-at-Risk simulations on Palantir and Oracle. 10,000 simulations each using log-normal returns. Outputs include VaR at 95%, CVaR (expected shortfall), and a loss distribution. These were the first models I built while learning the methodology — the EAL model applies the same Monte Carlo framework to physical climate risk instead of equity returns.
+## Equity Risk
 
-## Data sources
+**Palantir VaR** — `equity-risk/PLTR_VaR_MonteCarlo.xlsx`
+**Oracle VaR** — `equity-risk/ORCL_VaR_MonteCarlo.xlsx`
 
-- FEMA National Risk Index (county-level hazard EAL data)
-- EIA-860 Schedule 2 and Schedule 3 (power plant locations and generator capacity)
-- USACE depth-damage functions for commercial/industrial structures
-- Yahoo Finance (historical equity prices for VaR models)
+Monte Carlo Value-at-Risk models using 10,000 simulations on log-normal returns. Outputs include 95% VaR, CVaR (expected shortfall), and loss distribution histograms. Built these first to learn the simulation methodology, then applied the same framework to physical climate risk in the EAL model.
 
-## About me
+## Data Sources
 
-I'm Nicolas Rodriguez — incoming master's student at Tulane's Freeman School of Business in the Master of Management in Energy program. Background in finance, energy markets, and commodities. Based in New Orleans.
+- FEMA National Risk Index — hazards.fema.gov/nri
+- EIA-860 Plant and Generator Data — eia.gov/electricity/data/eia860
+- USACE Depth-Damage Functions (via FEMA HAZUS Technical Manual)
+- Yahoo Finance (historical equity prices)
 
+## Tools
+
+Excel (primary), Claude (for data cleaning and learning), working toward Python
+
+## About
+
+Nicolas Rodriguez
+Master of Management in Energy — Tulane University (Fall 2026)
 nicosantr@gmail.com

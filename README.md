@@ -4,7 +4,7 @@ Risk models I built in Excel covering climate-financial risk, Monte Carlo simula
 
 ## Climate Risk
 
-**Gulf Coast Flood EAL Model** — `climate-risk/EAL_model_Louisiana.xlsx`
+**Gulf Coast Flood EAL Model** — `climate-risk/EAL_model_LouisianaV3.xlsx`
 
 Expected Annual Loss model for Louisiana natural gas power plants exposed to flood hazard. Built with real data from FEMA's National Risk Index (filtered to 64 Louisiana parishes), EIA-860 power plant database (55 LA gas plants with MW capacity), and USACE depth-damage curves for industrial structures.
 

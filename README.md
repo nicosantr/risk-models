@@ -35,7 +35,7 @@ FYI — I used Claude to help with formula construction and data cleaning across
 
 **Palantir & Oracle VaR** — `equity-risk/PLNTR-ORCL-VaR.xlsx`
 
-Monte Carlo Value-at-Risk models using 10,000 simulations on log-normal returns. Outputs include 95% VaR, CVaR (expected shortfall), Student's t-VaR for fat-tail adjustment, historical simulation comparison, and a two-stock portfolio VaR with diversification benefit analysis. Built these first to learn the simulation methodology, then applied the same framework to physical climate risk in the models above.
+Monte Carlo Value-at-Risk models using 10,000 simulations on log-normal returns. Outputs include 95% VaR, CVaR (expected shortfall), historical simulation comparison, and a two-stock portfolio VaR with diversification benefit analysis. Built these first to learn the simulation methodology, then applied the same framework to physical climate risk in the models above.
 
 ## Data Sources
 
